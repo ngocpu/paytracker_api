@@ -1,0 +1,49 @@
+# Environment variables (chứa thông tin DB, secret key)
+.env
+.env.development
+.env.staging
+.env.production
+
+# Virtual environment
+venv/
+.venv/
+env/
+.env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+logs/
+
+*.db
+
+build/
+dist/
+
+htmlcov/
+.coverage
+.coverage.*
+
+# Pytest cache
+.pytest_cache/
+
+# Temporary files
+*.tmp
+*.temp
+user_flow.txt
+MySQL Database Schema (No Gamification).txt
