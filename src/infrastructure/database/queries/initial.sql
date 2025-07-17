@@ -105,3 +105,14 @@ CREATE TABLE SystemLogs (
     INDEX idx_systemlogs_user_created (user_id, created_at)
 );
 
+--OTP
+CREATE TABLE OTPs (
+    otp_id VARCHAR(36) PRIMARY KEY,
+    user_id VARCHAR(36),
+    otp_code VARCHAR(6),
+    created_at DATETIME,
+    expires_at DATETIME,
+    is_used BOOLEAN DEFAULT FALSE,
+    FOREIGN KEY (user_id) REFERENCES Users(user_id),
+    INDEX idx_otps_user_created (user_id, created_at)
+);
