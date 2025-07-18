@@ -1,5 +1,6 @@
 import mysql.connector
 from src.config import global_settings
+
 def get_database_connection():
     try:
         connection = mysql.connector.connect(

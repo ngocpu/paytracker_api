@@ -18,5 +18,9 @@ class GlobalSettings:
     GG_CLIENT: str = os.getenv("GG_CLIENT_ID")
     GG_SECRET: str = os.getenv("GG_CLIENT_SECRET")
     GG_REDIRECT_URI: str = os.getenv("GG_REDIRECT_URI")
+    MAIL_USER: str = os.getenv("MAIL_USER")
+    MAIL_PASS: str = os.getenv("MAIL_PASS")
+    MAIL_HOST: str = os.getenv("MAIL_HOST", "smtp.gmail.com")
+    MAIL_PORT: int = int(os.getenv("MAIL_PORT", 587))
 
 global_settings = GlobalSettings()
