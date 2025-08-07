@@ -1,13 +1,8 @@
 from fastapi import FastAPI
-from src.infrastructure.database.connection import get_database_connection
-from src.interface.routes import api_router
-
+from src.database import get_connection
 app = FastAPI()
-app.include_router(api_router)
-
+get_connection()
 @app.get("/")
-def root():
-    # conn = get_database_connection()
-    # if conn:
-        # conn.close()
-    return {"message": "Welcome to the PayTracker API!"}
+def read_root():
+    connection = get_connection()
+    return {"Hello": "World"}
